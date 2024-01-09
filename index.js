@@ -1,5 +1,6 @@
+require("dotenv").config();
 const TelegramApi = require("node-telegram-bot-api");
-const tgToken = "6564322584:AAHwufY6Tf_wloJhpa3ctdkkaWxI0vDtYaE";
+const tgToken = process.env.TG_TOKEN;
 const axios = require("axios");
 
 const bot = new TelegramApi(tgToken, { polling: true });
@@ -79,6 +80,7 @@ bot.on("message", async (msg) => {
   } else {
     return bot.sendMessage(
       chatId,
-      "Я не понимаю тебя. Попробуй ввести команду /info, она поможет ознакомиться с моими возможностями.");
+      "Я не понимаю тебя. Попробуй ввести команду /info, она поможет ознакомиться с моими возможностями."
+    );
   }
 });
