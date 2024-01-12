@@ -2,7 +2,6 @@ require("dotenv").config();
 const TelegramApi = require("node-telegram-bot-api");
 const tgToken = process.env.TG_TOKEN;
 const {
-  inlineWeatherButton,
   inlineKeyboardPanel,
   weatherKeyboard,
   removeKeyboard,
