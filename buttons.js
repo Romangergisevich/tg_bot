@@ -13,7 +13,6 @@ module.exports = {
 
   inlineKeyboardPanel: {
     reply_markup: JSON.stringify({
-      remove_keyboard: true,
       inline_keyboard: [
         [
           { text: "погода", callback_data: "weather_show" },
